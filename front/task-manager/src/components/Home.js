@@ -13,11 +13,17 @@ export default function Home() {
     setTaskList([...taskList, task]);
   }
 
+  const handleRemoveItem = (idx) => {
+    const updatedList = [...taskList]
+    updatedList.splice(idx, 1)
+    setTaskList(updatedList)
+  }
+
   return (
     <div className="flex flex-col items-center">
       <Header />
-      <NewInput onAddTask={handleAddTask} />
-      <TaskList taskList={taskList} />
+      <NewInput onAddTask={handleAddTask}/>
+      <TaskList taskList={taskList} onRemoveItem={handleRemoveItem} />
     </div>
   )
 }
