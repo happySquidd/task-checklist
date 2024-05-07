@@ -1,8 +1,8 @@
-
-export default function Home() {
+import Home from '@/components/Home';
+export default function App() {
   return (
     <main>
-      <div className="text-center">My Tasks</div>
+      <Home />
     </main>
   );
 }
