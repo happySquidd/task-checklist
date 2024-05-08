@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react'
+import { useState } from 'react';
 import NewInput from "./NewInput";
 import TaskList from "./TaskList";
 import Header from "./Header";
@@ -14,9 +14,9 @@ export default function Home() {
   }
 
   const handleRemoveItem = (idx) => {
-    const updatedList = [...taskList]
-    updatedList.splice(idx, 1)
-    setTaskList(updatedList)
+    const updatedList = [...taskList];
+    updatedList.splice(idx, 1);
+    setTaskList(updatedList);
   }
 
   return (

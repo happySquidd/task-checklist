@@ -7,7 +7,7 @@ export default function TaskList({ taskList , onRemoveItem}) {
     <div className="list">
       <ul>
         {taskList.map((item, index) => (
-          <li key={index}>{item}   <button onClick={() => onRemoveItem(index)}>Delete</button></li>
+          <li key={index}>{item.task} (Due date: {item.dueDate})   <button onClick={() => onRemoveItem(index)}>Delete</button></li>
         ))}
       </ul>
     </div>
